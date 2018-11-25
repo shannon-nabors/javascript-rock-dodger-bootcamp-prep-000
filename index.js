@@ -90,9 +90,11 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   function step() {
-    var leftNum = parseInt(DODGER.style.left.replace("px", ""));
-    if(leftNum > 0) {
-      DODGER.style.left = `${leftNum - 4}px`;
+    var leftNumbers = dodger.style.left.replace('px', '');
+    var left = parseInt(leftNumbers, 10);
+ 
+    if (left > 0) {
+      dodger.style.left = `${left - 4}px`;
     }
   }
   window.requestAnimationFrame(step);
